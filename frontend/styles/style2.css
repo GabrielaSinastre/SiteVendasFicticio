@@ -88,16 +88,16 @@ main{
 }
 
 #container{
-    width: 78.8vw;
+    width: 81vw;
     height: 77.7vh;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     overflow: scroll;
     overflow-x: hidden;
-    
+    border-style: none;
 }
 
 #container::-webkit-scrollbar {
@@ -105,40 +105,54 @@ main{
     height: 10px;
 }
      
-    #container::-webkit-scrollbar-track {
-    background:#333;
+#container::-webkit-scrollbar-track {
+    background: black;
 }
      
-    #container::-webkit-scrollbar-thumb {
+#container::-webkit-scrollbar-thumb {
     background: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
 }
 
-.ua{
-    margin-top: 10px;
-    background-color: white;
-    height: 400px;
-    width: 300px;
-    margin: 7px 7px 7px 7px;
+#container ul{
+    background-color: rgb(39, 36, 36);
+    height: auto;
+    width: 100%;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+#container ul li{
+    list-style: none;
+    border-style: solid;
+    border-color: white;
+    height: 7rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    font-family: 'Frijole', cursive;
-    font-size: small;
-}
-.ua img{
-    width: 12rem;
-    height: 12rem;
-}
-.ua button{
-    height: 2rem;
-    width: 8rem;
-    background-color: black;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: white;
+    margin-bottom: 0.5rem;
+    background-color: black;
     font-family: 'Frijole', cursive;
-    font-size: smaller;
-    cursor: pointer;
 }
+
+#container ul li img{
+    height: 6rem;
+    width: 6rem;
+}
+
+#informations{
+    display: flex;
+    align-items: center;
+    
+}
+
 section{
     position: fixed;
     width: 19.9rem;
@@ -149,67 +163,27 @@ section{
     align-items: center;
     justify-content: space-around;
     color: white; 
-    box-shadow:inset 0px 1px 10px 6px rgb(0, 0, 0);
-}
-
-section div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -5rem;
-}
-section h1{
+    box-shadow: inset 0px 11px 10px -10px red, inset 0px -11px 10px -10px red;
     font-family: 'Frijole', cursive;
 }
-section div h4{
-    display: flex;
-    width: 17rem;
-    height: 2rem;
-    background-color: rgb(0, 0, 0);
-    align-items: center;
-    justify-content: center;
+
+section img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+section button{
     border-style: solid;
-    border-width: thin;
-    font-family: 'Frijole', cursive;
-    margin-bottom: 0.2rem;
-}
-section div h4:hover{
-    border-image: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
-    border-image-slice: 1; 
-    background-color: #3b3838; 
-    cursor: pointer;
-}
-
-.form{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-.form input{
-    border-style: solid;
-    background-color: black;
-    color: white;
-
-}
-.form button{
-    margin-top: 1rem;
-    width: 6rem;
-    height: 2rem;
+    border-width: medium;
+    height: 3rem;
+    width: 50%;
     cursor: pointer;
     border-style: solid;
     border-image: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
     border-image-slice: 1; 
     background-color: black;
     color: white;
-    font-family: 'Frijole', cursive;
-}
-
-section div label{
     font-family: 'Frijole', cursive;
 }
 
@@ -224,6 +198,7 @@ footer{
     justify-content: center;
     color: white;
     text-align: center;
+    
 
 }
 
