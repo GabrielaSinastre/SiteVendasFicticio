@@ -7,6 +7,7 @@
     #35051e
     #600904-->
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Menucool Css Menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/frontend/styles/style.css" rel="stylesheet" />
@@ -23,22 +24,24 @@
     <section>
         <h1>Categories:</h1>
         <div>
-            <h4>Games</h4>
-            <h4>Console</h4>
-            <h4>Mousepad</h4>
-            <h4>Lights</h4>
-            <h4>Gamer Computer</h4>
+            <h4 id="filter1" onclick="filter('keyboard')">Keyboard</h4>
+            <h4 id="filter2" onclick="filter('headset')">Headset</h4>
+            <h4 id="filter3" onclick="filter('mouse')">Mouse</h4>
+            <h4 id="filter4" onclick="filter('chair')">Chair</h4>
+            <h4 id="filter5" onclick="filter('cabinet')">Cabinet</h4>
         </div>
         <h1>Add Product:</h1>
         <div class="form">
-            <label>Product Name:<input></label>
-            <label>Product Price:<input></label>
-            <label>Product Description:<input></label>
-            <button>ADD</button>
+            <label>Product Name:<input type="text" id="prodname"></label>
+            <label>Product Price:<input type="number" id="prodprice"></label>
+            <label>Product Category:<input type="text" id="prodcat"></label>
+            <button onclick="add()">ADD</button>
         </div>
     </section>
     <main> 
         <div id="container">
+        <!--
+            static example
             <div class="ua">
                 <img src="/frontend/images/controller.png">
                 <h2>Aaaaaaaa Bbbbbb</h2>
@@ -46,35 +49,7 @@
                 <h1>$ 1.434,00</h1>
                 <button>Add to cart</button>
             </div>
-            <div class="ua">
-                <img src="/frontend/images/controller.png">
-                <h2>Aaaaaaaa Bbbbbb</h2>
-                <h4>Nnnnnn Mmmmmm</h4>
-                <h1>$ 1.434,00</h1>
-                <button>Add to cart</button>
-            </div>
-            <div class="ua">
-                <img src="/frontend/images/controller.png">
-                <h2>Aaaaaaaa Bbbbbb</h2>
-                <h4>Nnnnnn Mmmmmm</h4>
-                <h1>$ 1.434,00</h1>
-                <button>Add to cart</button>
-            </div>
-            <div class="ua">
-                <img src="/frontend/images/controller.png">
-                <h2>Aaaaaaaa Bbbbbb</h2>
-                <h4>Nnnnnn Mmmmmm</h4>
-                <h1>$ 1.434,00</h1>
-                <button>Add to cart</button>
-            </div>
-            <div class="ua">
-                <img src="/frontend/images/controller.png">
-                <h2>Aaaaaaaa Bbbbbb</h2>
-                <h4>Nnnnnn Mmmmmm</h4>
-                <h1>$ 1.434,00</h1>
-                <button>Add to cart</button>
-            </div>
-            
+        -->        
             
         </div>
     </main>
@@ -83,7 +58,7 @@
         CNPJ n.º 03.333.333/0003-33 / Av. Ines Aparecida, nº 3.333, Center, Munique/SP - Zip Code: 03333-333 - Group Company: Good Game Well Played.<br>
         2021
     </footer>
- 
+    <script type="text/javascript" src="/frontend/scripts/script.js"></script>
 </div>
 </body>
 </html>

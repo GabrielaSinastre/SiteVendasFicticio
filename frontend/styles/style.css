@@ -196,6 +196,13 @@ section div h4:hover{
     color: white;
 
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .form button{
     margin-top: 1rem;
     width: 6rem;
