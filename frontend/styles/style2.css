@@ -145,6 +145,7 @@ main{
 #container ul li img{
     height: 6rem;
     width: 6rem;
+    border-radius: 50%;
 }
 
 #informations{
@@ -163,9 +164,10 @@ section{
     align-items: center;
     justify-content: space-around;
     color: white; 
-    box-shadow: inset 0px 11px 10px -10px red, inset 0px -11px 10px -10px red;
+    box-shadow:inset 0px 1px 10px 6px rgb(0, 0, 0);
     font-family: 'Frijole', cursive;
 }
+
 
 section img{
     width: 200px;

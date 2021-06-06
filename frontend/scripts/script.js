@@ -80,9 +80,6 @@ function add(){
 //filter function
 function filter(prod){
     //console.log(prod)
-    //let mom = document.getElementsByTagName('#container .ua');
-    
-    
     $('.ua').each(function() {
         console.log($(this)[0].children[2].innerText.toLowerCase())
         if($(this)[0].children[2].innerText.toLowerCase() == prod){
@@ -94,8 +91,8 @@ function filter(prod){
        });
 }
 
-
-
-//script na index2
-
-//script entre index1 e index2
+$('.ua button').click(function() {
+    var t = $(this).siblings(); // Vai pegar todos os irmãos.
+    module.export = t
+    console.log(t)
+    });
