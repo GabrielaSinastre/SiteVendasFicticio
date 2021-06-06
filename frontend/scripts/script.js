@@ -75,17 +75,25 @@ function add(){
     else alert("Error to add product, invalid fields")
 
 }
+
+
 //filter function
 function filter(prod){
     //console.log(prod)
     //let mom = document.getElementsByTagName('#container .ua');
-    $('#container div').each(function(index, element) {
-        console.log(index + ' : ' + element);
+    
+    
+    $('.ua').each(function() {
+        console.log($(this)[0].children[2].innerText.toLowerCase())
+        if($(this)[0].children[2].innerText.toLowerCase() == prod){
+            $(this).show()
+        }
+        else {
+            $(this).hide()
+        }
        });
-    //console.log(mom)
-
-
 }
+
 
 
 //script na index2
