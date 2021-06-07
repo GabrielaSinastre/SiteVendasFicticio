@@ -90,9 +90,17 @@ function filter(prod){
         }
        });
 }
-
+let v = []
 $('.ua button').click(function() {
-    var t = $(this).siblings(); // Vai pegar todos os irmãos.
-    module.export = t
-    console.log(t)
+    var [imagem] = $(this).siblings('img'); // Vai pegar todos os irmãos.
+    var [h2] = $(this).siblings('h2'); 
+    var [h1] = $(this).siblings('h1');
+
+
+    var produto = {imagem:imagem.src, h2:h2.innerText, h1:h1.innerText}
+
+    v.push(produto)
+
+    localStorage.setItem("produto",JSON.stringify(v))
+    //console.log(h2)
     });

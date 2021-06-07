@@ -188,6 +188,9 @@ section button{
     color: white;
     font-family: 'Frijole', cursive;
 }
+section button a{
+    color: white;
+}
 
 footer{
     background-color: black;
