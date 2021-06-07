@@ -1,4 +1,48 @@
+//user infos
 
+let user = {
+    name: '',
+    street: '',
+    city: '',
+    state: '',
+    zipcode: '',
+}
+
+let getuser = prompt("Put your name: ");
+user.name = getuser;
+getuser = prompt("Put the name of your street: ");
+user.street = getuser;
+getuser = prompt("Put the name of your city: ");
+user.city = getuser;
+getuser = prompt("Put the name of your state");
+user.state = getuser;
+getuser = prompt("Put your zipcode: ");
+user.zipcode = getuser;
+
+//let infos = 'Name: ' + user.name + ' Street: ' + user.street + ' City: ' + user.city + ' State: '+ user.state + ' Zipcode: ' + user.zipcode  
+localStorage.setItem("userinfo",JSON.stringify(user))
+
+let infos = document.getElementById('address-infos');
+let h5name = document.createElement('h5');
+let h5street = document.createElement('h5');
+let h5city = document.createElement('h5');
+let h5state = document.createElement('h5');
+let h5zipcode = document.createElement('h5');
+let ue = document.createElement('h4');
+
+h5name.innerText = `Name: ` + user.name
+infos.appendChild(h5name) 
+h5street.innerText = `Street: ` + user.street
+infos.appendChild(h5street) 
+h5city.innerText = `City: ` + user.city
+infos.appendChild(h5city) 
+h5state.innerText = `State: ` + user.state
+infos.appendChild(h5state) 
+h5zipcode.innerText = `Zipcode: ` + user.zipcode 
+infos.appendChild(h5zipcode) 
+ue.innerText = `Order Value: $  `
+infos.appendChild(ue)
+console.log(infos)
 // para criar elementos no carrinho
     
     
