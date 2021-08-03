@@ -10,16 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Menucool Css Menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/frontend/styles/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css')}}"  />
 </head>
 <body>
     <header>
-        <div id="bussimg"><img src="/frontend/images/controller.png"><h1>GGWP</h1></div>
+        <div id="bussimg"><img src="/static/images/controller.png"><h1>GGWP</h1></div>
         <div><h2>HOME</h2></div>
-        <a href="/frontend/templates/index2.html"><div><h2>SHOPPING CART</h2></div></a>
-        <div><h2>USER</h2></div>
-        
-       <!--<a href="#hltgs"><h2>Highlights</h2></a>--> 
+        <a href="/bag"><div><h2>SHOPPING CART</h2></div></a>
+        <div id="log"><h2>USER</h2></div>
     </header>
     <section>
         <h1>Categories:</h1>
@@ -30,16 +28,30 @@
             <h4 id="filter4" onclick="filter('chair')">Chair</h4>
             <h4 id="filter5" onclick="filter('cabinet')">Cabinet</h4>
         </div>
-        <h1>Add Product:</h1>
-        <div class="form">
-            <label>Product Name:<input type="text" id="prodname"></label>
-            <label>Product Price:<input type="number" id="prodprice"></label>
-            <label>Product Category:<input type="text" id="prodcat"></label>
-            <button onclick="add()">ADD</button>
-        </div>
+        <a id ="sendtoadd" href="/addprod"><div><h2>Click Here To Add Product</h2></div></a>
+        <!--<h1 id="sumir">Add Product:</h1>
+        <form class="form" method="POST" action="http://localhost:5000/home" enctype='multipart/form-data'>
+            <input type="hidden" name="form2" value="form2name">
+            <label>Product Name:<input type="text" id="prodname" name="prodname"></label>
+            <label>Product Price:<input type="number" id="prodprice" name="prodprice"></label>
+            <label>Product Category:<input type="text" id="prodcat" name="prodcat"> </label>
+            <label>Product Image:<input type="file" id="prodimg" name="prodimg"></label>
+            <button onclick="add()" type="submit" id="form2-submit" name="form2-submit">ADD</button>
+        </form>!-->
     </section>
     <main> 
         <div id="container">
+            
+            {% for info in infos %}
+        
+                <div class="ua">
+                    <img src="{{ url_for('static',filename='uploads/' + info['imagem'])}}">
+                    <h2>{{info['nome']}}</h2>
+                    <h4>{{info['categoria']}}</h4>
+                    <h1>$ {{info['preco']}}</h1>
+                    <button>Add to cart</button>
+                </div>
+            {% endfor %}
         <!--
             static example
             <div class="ua">
@@ -57,7 +69,7 @@
         CNPJ n.º 03.333.333/0003-33 / Av. Ines Aparecida, nº 3.333, Center, Munique/SP - Zip Code: 03333-333 - Group Company: Good Game Well Played.<br>
         2021
     </footer>
-    <script type="text/javascript" src="/frontend/scripts/script.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='scripts/script.js')}}"></script>
 </div>
 </body>
 </html>

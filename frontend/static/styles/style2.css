@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Open+Sans:wght@300&display=swap');
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+* {
+    margin: 0
+}
+body{
+    overflow: hidden;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
+    border-image-slice: 1;
+   
+}
+
+header #bussimg{
+    margin-left: -8rem;
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+}
+
+header img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+header h1{
+    margin-left: -20%;
+    font-family: 'Frijole', cursive;
+    text-shadow: 2px 2px 4px #000000;
+    -webkit-animation: rainbow 5s infinite;
+    cursor: default;
+}
+
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+header h2{
+    font-family: 'Frijole', cursive;
+    cursor: pointer;
+    color: white;
+
+}
+
+header h2:hover{
+    transition: 1s;
+    text-shadow: 2px 2px 4px #000000;
+    -webkit-animation: rainbow 5s infinite;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+main{
+    background-color: black;
+    height: 77.6vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#container{
+    width: 81vw;
+    height: 77.7vh;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-style: none;
+}
+
+#container::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+}
+     
+#container::-webkit-scrollbar-track {
+    background: black;
+}
+     
+#container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
+}
+
+#container ul{
+    background-color: rgb(39, 36, 36);
+    height: auto;
+    width: 100%;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+#container ul li{
+    list-style: none;
+    border-style: solid;
+    border-color: white;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    background-color: black;
+    font-family: 'Frijole', cursive;
+}
+
+#container ul li img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+}
+
+#informations{
+    display: flex;
+    align-items: center;
+    
+}
+
+section{
+    position: fixed;
+    width: 19.9rem;
+    height: 39rem;
+    background-color: rgb(39, 36, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white; 
+    box-shadow:inset 0px 1px 10px 6px rgb(0, 0, 0);
+    font-family: 'Frijole', cursive;
+}
+
+
+section img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+section button{
+    border-style: solid;
+    border-width: medium;
+    height: 3rem;
+    width: 50%;
+    cursor: pointer;
+    border-style: solid;
+    border-image: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
+    border-image-slice: 1; 
+    background-color: black;
+    color: white;
+    font-family: 'Frijole', cursive;
+}
+section button a{
+    color: white;
+}
+
+footer{
+    background-color: black;
+    height: 5rem;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to top left, #b827fc 0%, #2c90fc 25%, #fd1892 50%, #fec837 75%,#b8fd33  100%);
+    border-image-slice: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    
+
+}
+

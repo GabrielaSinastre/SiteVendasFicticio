@@ -10,36 +10,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Menucool Css Menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/frontend/styles/style2.css" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='styles/style2.css')}}" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <div id="bussimg"><img src="/frontend/images/controller.png"><h1>GGWP</h1></div>
-        <a href="/frontend/templates/index.html"><div><h2>HOME</h2></div></a>
+        <div id="bussimg"><img src="/static/images/controller.png"><h1>GGWP</h1></div>
+        <a href="/home"><div><h2>HOME</h2></div></a>
         <div><h2>SHOPPING CART</h2></div>
         <div><h2>USER</h2></div>
         
        <!--<a href="#hltgs"><h2>Highlights</h2></a>--> 
     </header>
     <section>
-        <img src="/frontend/images/controller.png">
+        {% for infouser in infosuser %}
+        <img src="{{ url_for('static',filename='uploads/' + infouser['imagem'])}}">
         <div id="address-infos">
-        <!--    <h5>Name: </h5>
-            <h5>State: </h5>
-            <h5>Barbara</h5>
-            <h5>St. Sant Avouir, 122</h5>
-            <h5>Zip Code: 45125-121</h5>
-            <h4>Order Value: $  </h4>     -->
+            
+            <h5>Name: <h5 id="username">{{infouser['nome']}}</h5></h5>
+            <h5>Street: <h5 id="userstreet">{{infouser['rua']}}</h5></h5>
+            <h5>City: <h5 id="usercity">{{infouser['cidade']}}</h5></h5>
+            <h5>State: <h5 id="userstate">{{infouser['estado']}}</h5></h5>
+            <h5>Zip Code: <h5 id="userzip">{{infouser['zipcode']}}</h5></h5>
+            {% endfor %}
         </div>
         <button>
-            <a href="/frontend/templates/index3.html"> Confirm Order</a>
+            <a href="/paymentconfirmed"> Confirm Order</a>
         </button>
     </section>
     <main> 
         <div id="container">
             <ul id="coluna">
                <!-- <li>
-                    <img src="/frontend/images/controller.png"> 
+                    <img src="/static/images/controller.png"> 
                     <div class="infomations"> Aaaassssss</div>
                     <h3>Price: $1002,98</h3>
                 </li>-->
@@ -53,7 +55,7 @@
         CNPJ n.º 03.333.333/0003-33 / Av. Ines Aparecida, nº 3.333, Center, Munique/SP - Zip Code: 03333-333 - Group Company: Good Game Well Played.<br>
         2021
     </footer>
-    <script type="module"  src="/frontend/scripts/script2.js"></script>
+    <script type="module"  src="{{ url_for('static',filename='scripts/script2.js')}}"></script>
 </div>
 </body>
 </html>

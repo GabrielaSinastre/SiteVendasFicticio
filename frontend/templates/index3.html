@@ -11,13 +11,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
-    <link href="/frontend/styles/style3.css" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='styles/style3.css')}}" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <div id="bussimg"><img src="/frontend/images/controller.png"><h1>GGWP</h1></div>
-        <a href="/frontend/templates/index.html"><div><h2>HOME</h2></div></a>
-        <a href="/frontend/templates/index2.html"><div><h2>SHOPPING CART</h2></div></a>
+        <div id="bussimg"><img src="/static/images/controller.png"><h1>GGWP</h1></div>
+        <a href="/home"><div><h2>HOME</h2></div></a>
+        <a href="/bag"><div><h2>SHOPPING CART</h2></div></a>
         <div><h2>USER</h2></div>
         
        <!--<a href="#hltgs"><h2>Highlights</h2></a>--> 
@@ -25,7 +25,7 @@
     <main> 
         <div id="container">
             <div id="approved">
-                <img src="/frontend/images/approved.png">
+                <img src="/static/images/approved.png">
                 <h1>Order successfully placed!</h1>
 
                 <p id="name">Name: </p>
@@ -34,7 +34,8 @@
                 <p id="state">State: </p>
                 <p id="zipcode">Zipcode: </p>
                 <p id="val"> Order Value: $ </p>
-                <p id="deadline">Code order: 3562313135131<br>Deadline: </p>
+                <p id="codeorder">Code order: </p>
+                <p id="deadline">Deadline: </p>
             </div>
         </div>
     </main>
@@ -43,6 +44,6 @@
         CNPJ n.º 03.333.333/0003-33 / Av. Ines Aparecida, nº 3.333, Center, Munique/SP - Zip Code: 03333-333 - Group Company: Good Game Well Played.<br>
         2021
     </footer>
-    <script type="module"  src="/frontend/scripts/script3.js"></script>
+    <script type="module"  src="{{ url_for('static',filename='scripts/script3.js')}}"></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <!--colors
+    #0e0108
+    #30102f
+    #4d4351
+    #35051e
+    #600904-->
+<head>
+    <title>Menucool Css Menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+    <link href="{{ url_for('static',filename='styles/style4.css')}}" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="bussimg"><img src="/static/images/controller.png"><h1>GGWP</h1></div>
+        <a href="/home"><div><h2>HOME</h2></a></div>
+        <a href="/bag"><div><h2>SHOPPING CART</h2></div></a>
+        <div id="log"><h2>USER</h2></div>
+    </header>
+    <h1 id="message">Type And Upload The Product Informations Below:</h1>
+    <form class="form" method="POST" action="http://localhost:5000/addprod" enctype='multipart/form-data'>
+        <label>Product Name:<br><input type="text" id="prodname" name="prodname"></label>
+        <label>Product Price:<br><input type="number" id="prodprice" name="prodprice"></label>
+        <label>Product Category:<br><input type="text" id="prodcat" name="prodcat"> </label>
+        <label>Product Image:<br><input type="file" id="prodimg" name="prodimg"></label>
+        <button type="submit">ADD</button>
+    </form>
+    <footer>
+        Copyright © 2021-2xxx GGWP.com LTDA <br>
+        CNPJ n.º 03.333.333/0003-33 / Av. Ines Aparecida, nº 3.333, Center, Munique/SP - Zip Code: 03333-333 - Group Company: Good Game Well Played.<br>
+        2021
+    </footer>
+</body>
+</html>
